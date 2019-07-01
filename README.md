@@ -17,12 +17,17 @@ Implementation Challenges #1:
 Work Around#1:
 - Rancid Inventory could be populated with dummy parameters for non-supported vendors. This paves a way to just avail the Source-Controllablity feature for non-supported platforms, provided we build a configuration collection mechanism, that can store the configuration backups into the source controlled repository.
 
-Example Inventory File with format <IP>:<Vendor>:<state>:
+Example Inventory File with format '\<IP\>:\<Vendor\>:\<state\>':
 
 10.0.0.1:cisco:up
+
 10.0.0.2:huawei:up
+
 10.0.0.3:paloalto:up
+
 10.0.0.4:dummy:up
+
+.
 
 On 'rancid-run', for the vendors/platforms that are not listed on,
 /etc/rancid/rancid.types.conf
