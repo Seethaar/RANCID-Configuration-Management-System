@@ -10,24 +10,21 @@ In my implementation of a Configuration Management Solution for a personal proje
 - Centralised Source Control
 - RSS feeds for updates
 
-Implementation Challenges #1:
+#### Implementation Challenges #1:
 - Apart from Cisco, there are not many vendors that could be supported by Rancid. So this system could not be built as vendor agnostic.
 - per-vendor configuration collection mechanism
 
-Work Around#1:
+#### Work Around #1:
 - Rancid Inventory could be populated with dummy parameters for non-supported vendors. This paves a way to just avail the Source-Controllablity feature for non-supported platforms, provided we build a configuration collection mechanism, that can store the configuration backups into the source controlled repository.
 
 Example Inventory File with format '\<IP\>:\<Vendor\>:\<state\>':
-
+```
 10.0.0.1:cisco:up
-
 10.0.0.2:huawei:up
-
 10.0.0.3:paloalto:up
-
 10.0.0.4:dummy:up
-
 .
+```
 
 On 'rancid-run', for the vendors/platforms that are not listed on,
 /etc/rancid/rancid.types.conf
@@ -39,10 +36,10 @@ Channels that I employed:
 - For Huawei - I used adhoc command using rancid module 'hulogin' - https://github.com/ssinyagin/rancid-ssi/blob/master/bin/hulogin.in
 - For PaloAlto - Bash script to cURL the XML API and grab the config
 
-Implementation Challenge #2:
+#### Implementation Challenge #2:
 - Integration of all the moving parts. My implementation of rancid involves running a lot of BASH scripts on a timed manner.
 
-Chronological Order:
+##### Chronological Order:
 - Collection of IP addresses of the active managed network elements - Bash script
 - Palo Alto Config collection script
 - Huawei Config collection script
@@ -51,7 +48,7 @@ Chronological Order:
 - Cleanup and Log rotation
 - Monthly report generation
 
-Work Around #2:
+#### Work Around #2:
 - Crontab
 
 
