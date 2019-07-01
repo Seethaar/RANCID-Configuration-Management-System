@@ -1,0 +1,18 @@
+This is just to alert you that the SSH keys for the  CPEs listed below got changed possibly due to one of the following reasons:
+
+a) The hardware must have been replaced.
+b) SSH keys were generated again on that CPE.
+c) Man-In-The-Middle Attack.
+
+Please check the records and related tickets and verify whether a or b was the case. In case of c, please alert your team 
+manager immediately.
+
+An automation script on rancid.corpservices.iseek.com.au (/usr/local/bin/automated_ssh_key_del_for_rancid.sh) deleted those 
+old keys from /usr/local/rancid/.ssh/known_hosts file, just to save some efforts for NOC personnel to log on to 
+
+rancid.support.com.au
+
+and deleting those keys manually. If this is undesirable, please edit that script accordingly or turn off the cron schedule under 
+/etc/cron.d
+
+The impacted CPE IP addresses are:
