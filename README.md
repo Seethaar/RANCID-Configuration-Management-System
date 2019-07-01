@@ -1,6 +1,8 @@
 # RANCID-Configuration-Management-System
 A smart solution for network configuration backup
 
+![Mindmap of this Project](https://github.com/Seethaar/RANCID-Configuration-Management-System/blob/master/Mind%20Map.jpg)
+
 The purpose of this project is deploy a source-controlled configuration management system across multiple vendors/platforms, primarily Cisco, Huawei and Palo Alto.
 
 RANCID is the acronym for Really Awesome New Cisco confIg Differ. This is a Configuration Management solution written in Expect Language by Shrubbery Networks Inc. http://www.shrubbery.net/rancid/
